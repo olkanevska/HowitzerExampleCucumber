@@ -30,7 +30,13 @@ bundle install
 
 ```
 rake -T
-Will use rake features if you want run all workable scenarios 
+
+```
+- Will use rake features if you want run all workable scenarios 
+
+```
+rake features 
+
 ```
 
 ## Contributing
