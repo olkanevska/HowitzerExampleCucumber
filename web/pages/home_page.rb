@@ -1,5 +1,6 @@
-class HomePage < Howitzer::Web::Page
+require_relative 'base_page'
+class HomePage < BasePage
   path '/'
-  validate :title, /\AYour advanced automated testing service provider | StrongQA\z/
-  section :main_menu
+  validate  :title, /\AZero - Personal Banking - Loans - Credit Cards\z/
+  section   :top_nav_menu
 end

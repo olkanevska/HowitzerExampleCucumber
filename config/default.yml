@@ -3,8 +3,8 @@
 ###########################################################
  app_base_auth_login: 
  app_base_auth_pass:
- app_protocol: https
- app_host: staging.strongqa.com
+ app_protocol: http
+ app_host: zero.webappsecurity.com
 
  app_test_user:
  app_test_pass:
@@ -12,7 +12,7 @@
 
  app_api_token:
  app_api_end_point: "api/v1"
- app_api_protocol: https
+ app_api_protocol: http
 
 ###########################################################
 # TEST ENVIRONMENTS SETTINGS                              #

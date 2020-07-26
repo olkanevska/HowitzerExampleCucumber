@@ -5,48 +5,30 @@
 ####################################
 #              ACTIONS             #
 ####################################
-When 'I submit sign up form on sign up page' do
-  SignUpPage.on { submit_form }
+
+When 'I fill login form with test data' do
+  @user = build(:user)
+  param = { user_name: @user.name, password: @user.password }
+  LoginPage.on { fill_form param }
 end
 
-When 'I fill form on sign up page with new data' do
-  @user = build(:user)
-  param = { user_name: @user.name,
-            email: @user.email,
-            password: @user.password.to_s,
-            password_confirmation: @user.password_confirmation.to_s }
-  SignUpPage.on do
-    fill_form param
-  end
+When 'I fill login form with blank data' do
+  param = {}
+  LoginPage.on { fill_form(param) }
 end
 
-When 'I fill form on sign up page with short password' do
+When 'I fill form with wrong password' do
   @user = build(:user)
-  param = { user_name: @user.name,
-            email: @user.email,
-            password: @user.password.to_s[0..5],
-            password_confirmation: @user.password_confirmation.to_s[0..5] }
-  SignUpPage.on do
+  param = { user_name: @user.name, password: @user.password.to_s.reverse }
+  LoginPage.on do
     fill_form(param)
   end
 end
 
-When 'I fill form on sign up page with different password data' do
-  @user = build(:user)
-  param = { user_name: @user.name,
-            email: @user.email,
-            password: @user.password.to_s,
-            password_confirmation: @user.password_confirmation.to_s.concat(33) }
-  SignUpPage.on do
-    fill_form(param)
-  end
+When 'I submit login form' do
+  LoginPage.on { submit_form }
 end
 
 ####################################
 #              CHECKS              #
 ####################################
-
-When 'I fill form on sign up page with blank data' do
-  param = {}
-  SignUpPage.on { fill_form(param) }
-end
