@@ -27,7 +27,7 @@ When /I click (.+?) button on (.+) page/ do |title, page|
 end
 
 When /I open My Profile dropdown on (.+) page/ do |page|
- page.on {top_nav_menu_section.open_profile_dropdown}
+  page.on { top_nav_menu_section.open_profile_dropdown }
 end
 
 ####################################

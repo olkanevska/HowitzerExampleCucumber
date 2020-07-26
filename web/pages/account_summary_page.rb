@@ -4,5 +4,4 @@ class AccountSummaryPage < BasePage
   validate  :title, /\AZero - Account Summary\z/
   section   :main_menu
   section   :top_nav_menu
-
 end

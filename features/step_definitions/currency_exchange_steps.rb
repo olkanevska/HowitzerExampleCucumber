@@ -2,7 +2,6 @@
 #                      PREREQUISITES                        #
 #############################################################
 
-
 ####################################
 #              ACTIONS             #
 ####################################
@@ -20,11 +19,10 @@ When 'Fill in Purchase foreign currency cash form with the next data:' do |table
 end
 
 When 'I click Purchase button' do
-  PayBillsPage.on {click_purchase_button}
+  PayBillsPage.on { click_purchase_button }
   sleep 10
 end
 
 ####################################
 #              CHECKS              #
 ####################################
-

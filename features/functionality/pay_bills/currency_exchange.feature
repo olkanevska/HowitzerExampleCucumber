@@ -11,7 +11,7 @@ Feature: Currency Exchange
       | currency      | amount       | currency_amount   |
       | <currency>    | <amount>     | <currency_amount> |
     And I click Purchase button
-    Then Then I should see following text on pay bills page:
+    Then I should see following text on pay bills page:
     """
     Foreign currency cash was successfully purchased.
     """

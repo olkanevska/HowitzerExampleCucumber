@@ -19,7 +19,7 @@ end
 
 When 'I fill form with wrong password' do
   @user = build(:user)
-  param = { user_name: @user.name, password: @user.password.to_s.reverse, }
+  param = { user_name: @user.name, password: @user.password.to_s.reverse }
   LoginPage.on do
     fill_form(param)
   end
@@ -29,8 +29,6 @@ When 'I submit login form' do
   LoginPage.on { submit_form }
 end
 
-
 ####################################
 #              CHECKS              #
 ####################################
-

@@ -1,7 +1,7 @@
 class MainMenuSection < Howitzer::Web::Section
   me '.nav-tabs'
 
-  element :menu_item,     :css, ->(t) { "[id='#{t}_tab']" }
+  element :menu_item, :css, ->(t) { "[id='#{t}_tab']" }
 
   def choose_menu(text)
     Howitzer::Log.info "Open '#{text}' menu"

@@ -19,7 +19,7 @@ class PayBillsPage < BasePage
   end
 
   def click_purchase_button
-    Howitzer::Log.info "Click Purchase button"
+    Howitzer::Log.info 'Click Purchase button'
     purchase_button_element.click
   end
 
@@ -46,5 +46,4 @@ class PayBillsPage < BasePage
     chose_currency_amount(attributes['currency_amount'])
     calculate_costs_element.click
   end
-
 end
